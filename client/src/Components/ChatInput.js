@@ -16,7 +16,7 @@ const ChatInput = ({ user, clickedUser, getClickedUsersMessages, getUsersMessage
     }
 
     try {
-      await axios.post('http://localhost:8000/message', {message})
+      await axios.post(' https://find-your-buddy-app.herokuapp.com/message', {message})
       getClickedUsersMessages()
       getUsersMessages()
       setTextArea('')

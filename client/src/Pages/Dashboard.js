@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/user", {
+      const response = await axios.get(" https://find-your-buddy-app.herokuapp.com/user", {
         params: { userId },
       });
       setUser(response.data);
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const getSkilledUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/skilled-users", {
+      const response = await axios.get(" https://find-your-buddy-app.herokuapp.com/skilled-users", {
         params: { skill: user?.skills },
       });
 
@@ -51,7 +51,7 @@ useEffect(() => {
 
   const updateMatches = async ( matchedUserId ) => {
     try {
-      await axios.put("http://localhost:8000/addmatch", {
+      await axios.put(" https://find-your-buddy-app.herokuapp.com/addmatch", {
         userId,
         matchedUserId
       });

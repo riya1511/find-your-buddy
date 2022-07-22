@@ -13,7 +13,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
 
   const getUsersMessages = async () => {
     try {
-           const response = await axios.get('http://localhost:8000/messages', {
+           const response = await axios.get(' https://find-your-buddy-app.herokuapp.com/messages', {
                params: { userId: userId, correspondingUserId: clickedUserId }
            })
         setUsersMessages(response.data)
@@ -24,7 +24,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
 
    const getClickedUsersMessages = async () => {
        try {
-           const response = await axios.get('http://localhost:8000/messages', {
+           const response = await axios.get(' https://find-your-buddy-app.herokuapp.com/messages', {
                params: { userId: clickedUserId , correspondingUserId: userId }
            })
            setClickedUsersMessages(response.data)
