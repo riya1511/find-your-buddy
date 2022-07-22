@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ChatContainer from "../Components/ChatContainer";
 // import TinderCard from '../react-tinder-card/index'
-import TinderCard from "../react-tinder-card";
+import TinderCard from "react-tinder-card";
+// import TinderCard from "../react-tinder-card";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
-  const [skilledUsers, setSkilledUsers] = useState([]);
+  const [skilledUsers, setSkilledUsers] = useState();
   const [lastDirection, setLastDirection] = useState();
 
   const [cookie, setCookie, removeCookie] = useCookies(["user"]);

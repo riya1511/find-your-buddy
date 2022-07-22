@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 require('dotenv').config()
-const uri = process.env.URI
+const URI = process.env.URI
 
 const app = express();
 app.use(cors());
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const { email, password } = req.body;
 
@@ -55,7 +55,7 @@ app.post("/signup", async (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const { email, password } = req.body;
 
@@ -85,7 +85,7 @@ app.post("/login", async (req, res) => {
 });
 
 app.get("/skilled-users", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const skill = req.query.skill;
 
@@ -107,7 +107,7 @@ app.get("/skilled-users", async (req, res) => {
 });
 
 app.get("/user", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const userId = req.query.userId;
 
@@ -127,7 +127,7 @@ app.get("/user", async (req, res) => {
 });
 
 app.put("/user", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const formData = req.body.formData;
 
@@ -163,7 +163,7 @@ app.put("/user", async (req, res) => {
 });
 
 app.put("/addmatch", async (req, res) => {
-    const client = new MongoClient(uri)
+    const client = new MongoClient(URI)
     const {userId, matchedUserId} = req.body
 
     try {
@@ -183,7 +183,7 @@ app.put("/addmatch", async (req, res) => {
 });
 
 app.get("/users", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
 
   const userIds = JSON.parse(req.query.userIds);
   // console.log(userIds);
@@ -212,7 +212,7 @@ app.get("/users", async (req, res) => {
 });
 
 app.get("/messages", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(URI);
   const { userId, correspondingUserId } = req.query;
   console.log(userId, correspondingUserId);
 
@@ -236,7 +236,7 @@ app.get("/messages", async (req, res) => {
 });
 
 app.post("/message", async (req, res) => {
-    const client = new MongoClient(uri);
+    const client = new MongoClient(URI);
 
     const message = req.body.message
 try {
@@ -253,6 +253,6 @@ try {
 }
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

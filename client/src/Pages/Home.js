@@ -7,10 +7,10 @@ const Home = () => {
 
   const [cookies, setCookies, removeCookies] = useCookies(['user'])
 
-  const authToken = cookies.Token;
-
   const [showModal, setShowModal] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
+
+  const authToken = cookies.Token;
 
   const handleClick = () => {
     if (authToken) {
@@ -35,9 +35,9 @@ const Home = () => {
         setIsSignUp={setIsSignUp}
       />
       <div className="home">
-        <h1 className="primary-title">Swipe Right@</h1>
+        <h1 className="primary-title">Swipe Right</h1>
         <button className="primary-button" onClick={handleClick}>
-          {authToken ? "Sign In" : "Create Account"}
+          {authToken ? "Sign Out" : "Create Account"}
         </button>
 
         {showModal && <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />}

@@ -12,8 +12,10 @@ const ChatHeader = ({ user }) => {
   const logout = () => {
     removeCookie('UserId', cookie.UserId)
     removeCookie('Token', cookie.Token)
-    window.location.reload()
-    navigate('/')
+    window.location.href = '/';
+    return false
+    // window.location.reload()
+    // navigate('/')
   }
 
   return (

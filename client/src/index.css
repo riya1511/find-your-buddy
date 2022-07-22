@@ -317,6 +317,18 @@ nav .nav-button:disabled {
     overflow-y: auto;
 }
 
+.matches_display .image_container {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.matches_display .image_container img {
+    width: 100%;
+}
+
 /*-------- ChatInput  --------*/
 
 .chat_input {
