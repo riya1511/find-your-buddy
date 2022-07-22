@@ -1,7 +1,7 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
 const { v4: uuidv4 } = require("uuid");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 require('dotenv').config()
@@ -21,7 +21,7 @@ app.post("/signup", async (req, res) => {
   const { email, password } = req.body;
 
   const generateUserId = uuidv4();
-  const hashedPassword = await bcrypt.hash(password, 10);
+  const hashedPassword = await bcryptjs.hash(password, 10);
 
   try {
     await client.connect();
@@ -66,7 +66,7 @@ app.post("/login", async (req, res) => {
 
     const user = await users.findOne({ email });
 
-    const correctPassword = await bcrypt.compare(password, user.hashedPassword);
+    const correctPassword = await bcryptjs.compare(password, user.hashedPassword);
 
     if (user && correctPassword) {
       const token = jwt.sign(user, email, {
