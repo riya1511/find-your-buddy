@@ -28,7 +28,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
             }
 
             // const response = await axios.post(` https://find-your-buddy-app.herokuapp.com/${isSignUp ? 'signup' : 'login'}`, { email, password })
-            const response = await axios.post(`https://find-your-buddy.netlify.app/${isSignUp ? 'signup' : 'login'}`, { email, password })
+            const response = await axios.post(`https://find-your-buddy-app.herokuapp.com/${isSignUp ? 'signup' : 'login'}`, { email, password })
 
             setCookies('Token', response.data.token)
             setCookies('UserId', response.data.userId)
