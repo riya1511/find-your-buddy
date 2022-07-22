@@ -30,7 +30,7 @@ const Onboarding = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(' https://find-your-buddy-app.herokuapp.com/user', { formData })
+      const response = await axios.put('https://find-your-buddy.netlify.app/user', { formData })
 
       const success = response.status === 200;
 
