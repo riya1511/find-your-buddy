@@ -15,15 +15,15 @@ https://find-your-buddy.netlify.app/
 
 * User can create an account and login from the home page and the data will be stored on MongoDB.
 ![img1](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img1.png)
-![img2](../find-your-buddy/client/src/Images/screenshots/img2.png)
+![img2](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img2.png)
 * Will be navigated to the onboarding page where all the details can be filled.
-![img3](../find-your-buddy/client/src/Images/screenshots/img3.png)
-![img4](../find-your-buddy/client/src/Images/screenshots/img4.png)
+![img3](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img3.png)
+![img4](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img4.png)
 * After creating the account, the user will be navigated to the dashboard page where match cards will be shown.
-![img5](../find-your-buddy/client/src/Images/screenshots/img5.png)
+![img5](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img5.png)
 * User can left swipe or right swipe the cards, after right swiping the matches column on the left side will be updated and the user can click on any of the matches to chat with them.
-![img6](../find-your-buddy/client/src/Images/screenshots/img6.png)
-![img7](../find-your-buddy/client/src/Images/screenshots/img7.png)
+![img6](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img6.png)
+![img7](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img7.png)
 
 
 
