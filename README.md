@@ -14,7 +14,7 @@ https://find-your-buddy.netlify.app/
 ## How it works
 
 * User can create an account and login from the home page and the data will be stored on MongoDB.
-![img1](../find-your-buddy/client/src/Images/screenshots/img1.png)
+![img1](https://github.com/riya1511/find-your-buddy/blob/master/client/src/Images/screenshots/img1.png)
 ![img2](../find-your-buddy/client/src/Images/screenshots/img2.png)
 * Will be navigated to the onboarding page where all the details can be filled.
 ![img3](../find-your-buddy/client/src/Images/screenshots/img3.png)
